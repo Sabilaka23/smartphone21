@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FuturePhone Pro - Smartphone Masa Depan</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXX');
+    </script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Facebook Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'FACEBOOK_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Facebook Pixel -->
+    
+    <style>
+        .product-hero {
+            padding: 8rem 0 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 70%),
+                        radial-gradient(circle at bottom left, rgba(168, 85, 247, 0.1), transparent 70%);
+            z-index: -1;
+        }
+        
+        .product-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        .product-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .product-image img {
+            max-height: 500px;
+            filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
+        }
+        
+        .product-details {
+            flex: 1;
+        }
+        
+        .product-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .product-description {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        
+        .product-features {
+            margin-bottom: 2rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item ion-icon {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+        
+        .specs-section {
+            padding: 5rem 0;
+            background: var(--gradient-dark);
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .specs-card {
+            background-color: rgba(26, 26, 26, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+        }
+        
+        .specs-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .specs-card h3 ion-icon {
+            color: var(--primary-color);
+        }
+        
+        .specs-list {
+            color: var(--text-muted);
+        }
+        
+        .specs-list li {
+            margin-bottom: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .specs-list li span:last-child {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 992px) {
+            .product-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .product-title {
+                font-size: 2.5rem;
+            }
+            
+            .feature-item {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <ion-icon name="phone-portrait-outline"></ion-icon> FuturePhone
+            </a>
+            <div class="menu-toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle active">Produk <ion-icon name="chevron-down-outline"></ion-icon></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="produk1.html">FuturePhone X</a></li>
+                        <li><a href="produk2.html" class="active">FuturePhone Pro</a></li>
+                        <li><a href="produk3.html">FuturePhone Ultra</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontak.html">Kontak</a></li>
+                <li class="nav-button"><a href="#" class="btn btn-primary" id="navBuyButton">Beli Sekarang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Product Hero Section -->
+    <section class="product-hero">
+        <div class="container">
+            <div class="product-content">
+                <div class="product-image fade-in">
+                    <img src="images/model-pro.png" alt="FuturePhone Pro">
+                </div>
+                <div class="product-details">
+                    <h1 class="product-title fade-in">FuturePhone Pro</h1>
+                    <div class="product-price fade-in delay-1">Rp 12.999.000</div>
+                    <p class="product-description fade-in delay-1">
+                        FuturePhone Pro adalah smartphone premium dengan performa tinggi dan fitur profesional. Dirancang untuk pengguna yang membutuhkan kinerja maksimal dan kamera profesional.
+                    </p>
+                    <div class="product-features fade-in delay-2">
+                        <div class="feature-item">
+                            <ion-icon name="flash-outline"></ion-icon>
+                            <span>Prosesor Quantum X2 Pro - Performa Ultra</span>
+                        </div>
+                        <div class="feature-item">
+                            <ion-icon name="battery-charging-outline"></ion-icon>
+                            <span>Baterai 5500mAh dengan Fast Charging 120W</span>
+                        </div>
+                        <div class="feature-item">
+                            <ion-icon name="camera-outline"></ion-icon>
+                            <span>Kamera 108MP dengan Optical Zoom 5x</span>
+                        </div>
+                        <div class="feature-item">
+                            <ion-icon name="scan-outline"></ion-icon>
+                            <span>Layar AMOLED 6.7" dengan 144Hz Refresh Rate</span>
+                        </div>
+                    </div>
+                    <div class="fade-in delay-3">
+                        <button class="btn btn-primary btn-lg" id="productBuyButton">Beli Sekarang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="specs-section">
+        <div class="container">
+            <h2 class="section-title">Spesifikasi Teknis</h2>
+            <div class="specs-grid">
+                <div class="specs-card">
+                    <h3><ion-icon name="hardware-chip-outline"></ion-icon> Performa</h3>
+                    <ul class="specs-list">
+                        <li><span>Prosesor</span> <span>Quantum X2 Pro Octa-core</span></li>
+                        <li><span>RAM</span> <span>12GB LPDDR5X</span></li>
+                        <li><span>Penyimpanan</span> <span>256GB UFS 3.1</span></li>
+                        <li><span>GPU</span> <span>Adreno 730</span></li>
+                        <li><span>OS</span> <span>FutureOS 12 Pro</span></li>
+                    </ul>
+                </div>
+                <div class="specs-card">
+                    <h3><ion-icon name="scan-outline"></ion-icon> Layar</h3>
+                    <ul class="specs-list">
+                        <li><span>Tipe</span> <span>AMOLED LTPO</span></li>
+                        <li><span>Ukuran</span> <span>6.7 inci</span></li>
+                        <li><span>Resolusi</span> <span>3200 x 1440 (QHD+)</span></li>
+                        <li><span>Refresh Rate</span> <span>144Hz Adaptif</span></li>
+                        <li><span>Proteksi</span> <span>Gorilla Glass Victus+</span></li>
+                    </ul>
+                </div>
+                <div class="specs-card">
+                    <h3><ion-icon name="camera-outline"></ion-icon> Kamera</h3>
+                    <ul class="specs-list">
+                        <li><span>Kamera Utama</span> <span>108MP f/1.5 OIS</span></li>
+                        <li><span>Ultra Wide</span> <span>48MP f/2.2</span></li>
+                        <li><span>Telephoto</span> <span>12MP f/2.8 5x Optical Zoom</span></li>
+                        <li><span>Kamera Depan</span> <span>50MP f/1.9</span></li>
+                        <li><span>Video</span> <span>8K@30fps, 4K@120fps</span></li>
+                    </ul>
+                </div>
+                <div class="specs-card">
+                    <h3><ion-icon name="battery-charging-outline"></ion-icon> Baterai & Lainnya</h3>
+                    <ul class="specs-list">
+                        <li><span>Kapasitas</span> <span>5500mAh</span></li>
+                        <li><span>Fast Charging</span> <span>120W</span></li>
+                        <li><span>Wireless Charging</span> <span>50W</span></li>
+                        <li><span>Dimensi</span> <span>163.2 x 75.6 x 8.3 mm</span></li>
+                        <li><span>Berat</span> <span>205g</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <ion-icon name="phone-portrait-outline"></ion-icon> FuturePhone
+                    </a>
+                    <p>Smartphone masa depan dengan teknologi terdepan.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Tautan</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#models">Produk</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Kontak</h3>
+                    <p><ion-icon name="mail-outline"></ion-icon> info@futurephone.com</p>
+                    <p><ion-icon name="call-outline"></ion-icon> +62 123 4567 890</p>
+                    <p><ion-icon name="location-outline"></ion-icon> Jl. Teknologi No. 123, Jakarta</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Ikuti Kami</h3>
+                    <div class="social-icons">
+                        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FuturePhone. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Form Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close-modal">
+                <ion-icon name="close-outline"></ion-icon>
+            </span>
+            <h2>Formulir Pembelian</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Nomor Telepon</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Alamat Pengiriman</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <select id="model" name="model">
+                        <option value="FuturePhone X">FuturePhone X</option>
+                        <option value="FuturePhone Pro" selected>FuturePhone Pro</option>
+                        <option value="FuturePhone Ultra">FuturePhone Ultra</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Konfirmasi Pembelian</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Product Buy Button
+            const productBuyButton = document.getElementById('productBuyButton');
+            const modal = document.getElementById('contactModal');
+            
+            if (productBuyButton) {
+                productBuyButton.addEventListener('click', function() {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Track button click
+                    if (typeof dataLayer !== 'undefined') {
+                        dataLayer.push({
+                            event: 'button_click',
+                            button_name: 'product_buy_button',
+                            product: 'FuturePhone Pro'
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
